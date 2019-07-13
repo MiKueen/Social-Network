@@ -1,0 +1,67 @@
+{% extends 'users/index.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+{% block content %}		
+
+<!--	
+    <div class="container">
+        <h2>Login</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+    </div>
+-->
+
+
+<!-- Login-Registration Form  -->
+
+			<div class="registration-login-form">
+				<!-- Nav tabs -->
+				
+
+				<!-- Tab panes -->
+
+
+				<div class="tab-pane" id="profile" role="tabpanel" data-mh="log-tab">
+						<div class="title h6">Login to your Account</div>
+
+						<form class="content" method="POST" action="">
+                            {% csrf_token %}
+							<div class="row">
+								<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+									{{ form.as_p }}
+
+									<div class="remember">
+
+										<div class="checkbox">
+											<label>
+												<input name="optionsCheckboxes" type="checkbox">
+												Remember Me
+											</label>
+										</div>
+										<a href="#" class="forgot">Forgot my Password</a>
+									</div>
+                                    <button type="submit" class="btn btn-lg btn-primary full-width">Login</button>
+
+									<div class="or"></div>
+
+									<a href="#" class="btn btn-lg bg-facebook full-width btn-icon-left"><i class="fab fa-facebook-f" aria-hidden="true"></i>Login with Facebook</a>
+
+									<a href="#" class="btn btn-lg bg-twitter full-width btn-icon-left"><i class="fab fa-twitter" aria-hidden="true"></i>Login with Twitter</a>
+
+
+									<p>Don’t you have an account? <a href="{% url 'users:register' %}">Register Now!</a> it’s really simple and you can start enjoing all the benefits!</p>
+								</div>
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- ... end Login-Registration Form  -->
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'users/index.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<!--	
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+        </form>
+    </div>
+-->
+
+
+<!-- Login-Registration Form  -->
+
+			<div class="registration-login-form">
+				<!-- Nav tabs -->
+				
+
+				<!-- Tab panes -->
+
+                <div class="tab-content">
+					<div class="tab-pane active" id="home" role="tabpanel" data-mh="log-tab">
+						<div class="title h6">Register to Snuppr</div>
+
+						<form class="content" method="POST" action="">
+                            {% csrf_token %}
+							<div class="row">
+                               
+								<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+									<div class="form-group label-floating is-empty">
+										{{ form.as_table }}
+                                        
+									</div>
+								</div>
+								
+
+									<div class="remember">
+										<div class="checkbox">
+											<label>
+												<input name="optionsCheckboxes" type="checkbox">
+												By clicking "Complete Registration!" you accept the
+                                                <a href="#">Terms and Conditions</a> of the website
+											</label>
+										</div>
+									</div>
+                                    <button type="submit" class="btn btn-purple btn-lg full-width">Complete Registration!</button>
+
+
+								</div>
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- ... end Login-Registration Form  -->
+
+{% endblock %}
